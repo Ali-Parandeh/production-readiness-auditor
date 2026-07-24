@@ -1,4 +1,4 @@
-# Production Readiness Auditor
+# Production Readiness Auditor (Based on BGAI Book)
 
 A Claude Code skill that runs a structured production-readiness audit on a FastAPI + LLM/Generative AI codebase. It is grounded in *[Building Generative AI Services with FastAPI* (Ali Parandeh, O'Reilly, 2025)](https://buildinggenai.com).
 
