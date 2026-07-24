@@ -2,7 +2,7 @@
 
 A Claude Code skill that runs a structured production-readiness audit on a FastAPI + LLM/Generative AI codebase. It is grounded in *[Building Generative AI Services with FastAPI* (Ali Parandeh, O'Reilly, 2025)](https://buildinggenai.com).
 
-![https://buildinggenai.com](images\book.webp)
+[<img alt="Building Generative AI Services with FastAPI (O'Reilly)" width="400" src="images/book.webp" />](https://buildinggenai.com)
 
 The skill runs **inside your repository** from a coding agent. It walks the code itself, grades seven areas one at a time as Pass / Partial / Fail with book-grounded feedback, and only asks you questions the code cannot answer. At the end it writes a timestamped audit report to the repo root.
 
