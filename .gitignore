@@ -1,0 +1,24 @@
+# IDE and editor
+.idea/
+.junie/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python (in case reference material or tooling is added)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Generated audit reports (in case the skill is ever run against this repo)
+PRODUCTION_READINESS_AUDIT-*.md
