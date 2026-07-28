@@ -50,7 +50,7 @@ The skill directory must be named so it contains `SKILL.md` at its top level. Re
 
 ## Usage
 
-From inside the repo you want to audit, ask Claude Code to run it, for example:
+From inside the repo you want to audit, ask Claude Code or your agent harness to run it, for example:
 
 - "Is my codebase production-ready?"
 - "Run a FastAPI production audit"
