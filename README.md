@@ -111,4 +111,4 @@ references/
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+APACHE 2.0. See [LICENSE](LICENSE).
