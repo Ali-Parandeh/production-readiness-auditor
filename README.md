@@ -30,23 +30,42 @@ Feedback is grounded first in the reference files under `references/`, optionall
 
 ## Installation
 
-The skill is a directory containing `SKILL.md` and its `references/`. Install it by placing that directory under a Claude Code skills path.
+### As a plugin (recommended)
+
+Inside Claude Code, run:
+
+```bash
+/plugin install production-readiness-auditor --marketplace Ali-Parandeh/production-readiness-auditor
+```
+
+That needs Claude Code 2.1.275 or later. On older versions, add the marketplace first and then install:
+
+```bash
+/plugin marketplace add Ali-Parandeh/production-readiness-auditor
+/plugin install production-readiness-auditor@buildinggenai
+```
+
+You get updates with `/plugin marketplace update buildinggenai`.
+
+### As a standalone skill
+
+If you'd rather not use plugins, clone the repo into a Claude Code skills directory. The folder needs `SKILL.md` at its top level.
 
 **Personal (available in every project):**
 
 ```bash
-git clone https://github.com/aliparandeh/production-readiness-auditor.git ~/.claude/skills/production-readiness-auditor
+git clone https://github.com/Ali-Parandeh/production-readiness-auditor.git ~/.claude/skills/production-readiness-auditor
 ```
 
 **Project-scoped (checked in with a specific repo):**
 
 ```bash
-git clone https://github.com/aliparandeh/production-readiness-auditor.git .claude/skills/production-readiness-auditor
+git clone https://github.com/Ali-Parandeh/production-readiness-auditor.git .claude/skills/production-readiness-auditor
 ```
 
 On Windows PowerShell, swap `~/.claude` for `$env:USERPROFILE\.claude`.
 
-The skill directory must be named so it contains `SKILL.md` at its top level. Restart Claude Code (or start a new session) so it picks the skill up.
+Restart Claude Code (or start a new session) so it picks the skill up. Don't install it both ways, or the skill shows up twice.
 
 ## Usage
 
@@ -56,7 +75,13 @@ From inside the repo you want to audit, ask Claude Code or your agent harness to
 - "Run a FastAPI production audit"
 - "Review this GenAI service for deployment"
 
-Or invoke it directly:
+Or invoke it directly. Installed as a plugin:
+
+```
+/production-readiness-auditor:production-readiness-auditor
+```
+
+Installed as a standalone skill:
 
 ```
 /production-readiness-auditor
@@ -96,6 +121,8 @@ The skill auto-detects the MCP. If tools like `search_oreilly_content` or `ask_o
 ## Repository layout
 
 ```
+.claude-plugin/
+  marketplace.json           plugin marketplace manifest
 SKILL.md                     the skill definition and the seven-area audit loop
 references/
   ch02-architecture.md       grounding for areas 1 and 2
