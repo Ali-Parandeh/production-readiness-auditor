@@ -1,5 +1,6 @@
 {
   "name": "production-readiness-auditor",
+  "version": "1.0.0",
   "description": "Audit a FastAPI plus LLM/GenAI codebase for production readiness across seven areas, grounded in Building Generative AI Services with FastAPI.",
   "author": {
     "name": "Ali Parandeh",
