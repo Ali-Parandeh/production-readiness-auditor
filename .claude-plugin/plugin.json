@@ -1,6 +1,6 @@
 {
   "name": "production-readiness-auditor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Audit a FastAPI plus LLM/GenAI codebase for production readiness across seven areas, grounded in Building Generative AI Services with FastAPI.",
   "author": {
     "name": "Ali Parandeh",
@@ -8,6 +8,8 @@
   },
   "homepage": "https://buildinggenai.com",
   "repository": "https://github.com/Ali-Parandeh/production-readiness-auditor",
+  "documentationUrl": "https://github.com/Ali-Parandeh/production-readiness-auditor#readme",
+  "supportUrl": "https://github.com/Ali-Parandeh/production-readiness-auditor/issues",
   "license": "Apache-2.0",
   "keywords": ["fastapi", "llm", "genai", "audit", "production-readiness", "code-review"]
 }
