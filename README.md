@@ -123,7 +123,6 @@ The skill auto-detects the MCP. If tools like `search_oreilly_content` or `ask_o
 ```
 .claude-plugin/
   marketplace.json           plugin marketplace manifest
-  icon.png                   plugin listing icon
 SKILL.md                     the skill definition and the seven-area audit loop
 references/
   ch02-architecture.md       grounding for areas 1 and 2
