@@ -10,6 +10,7 @@
   "repository": "https://github.com/Ali-Parandeh/production-readiness-auditor",
   "documentationUrl": "https://github.com/Ali-Parandeh/production-readiness-auditor#readme",
   "supportUrl": "https://github.com/Ali-Parandeh/production-readiness-auditor/issues",
+  "privacyPolicyUrl": "https://github.com/Ali-Parandeh/production-readiness-auditor/blob/main/PRIVACY.md",
   "license": "Apache-2.0",
   "keywords": ["fastapi", "llm", "genai", "audit", "production-readiness", "code-review"]
 }

@@ -118,12 +118,31 @@ claude mcp list
 
 The skill auto-detects the MCP. If tools like `search_oreilly_content` or `ask_oreilly_experts` are present it uses them; otherwise it degrades cleanly to `references/oreilly-fallback.md`.
 
+When it's connected, the skill sends short topic queries to O'Reilly (for example "Docker non-root container security"). It does not send your source code, file names, config or anything that identifies your project. See [PRIVACY.md](PRIVACY.md).
+
+## Troubleshooting
+
+**The skill doesn't start when I ask for an audit.** Check it's installed: run `/plugin` and look for `production-readiness-auditor`, or check the folder exists under `~/.claude/skills/` if you cloned it. Start a new session after installing. If it still doesn't trigger, call it directly with the slash command under Usage.
+
+**It shows up twice.** You've installed it as a plugin and as a cloned skill. Remove one.
+
+**It says the repo isn't a FastAPI + LLM service.** The skill is built for that stack. It will still grade what it can, but areas like streaming and LLM security won't apply to a plain web app or a non-FastAPI project.
+
+**The O'Reilly MCP isn't being used.** Run `claude mcp list` and check `oreilly` is listed and connected. An auth failure usually means the token is missing or expired. The audit still works without it, using the bundled references.
+
+**No report file appeared.** The report is written to the repository root at the end of the full audit. If you stopped partway through, ask Claude to write the report for the areas covered so far.
+
+**Something else.** Open an issue at https://github.com/Ali-Parandeh/production-readiness-auditor/issues. For security problems, see [SECURITY.md](SECURITY.md) instead.
+
 ## Repository layout
 
 ```
 .claude-plugin/
   marketplace.json           plugin marketplace manifest
+  plugin.json                plugin manifest
 SKILL.md                     the skill definition and the seven-area audit loop
+PRIVACY.md                   privacy policy
+SECURITY.md                  how to report security issues
 references/
   ch02-architecture.md       grounding for areas 1 and 2
   ch05-async.md              grounding for areas 3 and 4
